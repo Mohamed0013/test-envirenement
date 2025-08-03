@@ -37,7 +37,16 @@ SRC = ./execution/builtins/cd.c \
 ./utils/empty_line.c \
 ./utils/env.c \
 ./execution/exit_clear.c \
-./garbage_collector/ft_malloc.c
+./garbage_collector/ft_malloc.c \
+./expansion/utils/check_utils.c \
+./expansion/utils/expand_args.c \
+./expansion/utils/get_env_value.c \
+./expansion/utils/get_masklen.c \
+./expansion/utils/handle_qotes.c \
+./expansion/utils/handle_vars.c \
+./expansion/utils/init_context.c \
+./expansion/utils/process_env_var.c \
+./expansion/utils/quoted_str.c \
 
 
 # Object files

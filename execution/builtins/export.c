@@ -59,6 +59,8 @@ t_env	**utils(int count, t_env *temp, t_env *env_list)
 
 void	print_env_sorted(t_env *env_list)
 {
+	if (!env_list)
+		return;
 	int		count;
 	t_env	*temp;
 	t_env	**arr;

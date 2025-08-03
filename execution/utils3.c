@@ -88,13 +88,15 @@ int	validate_and_split(char *arg, char **name, char **value)
 		*value = NULL;
 	}
 	if (!is_valid_env_name(*name))
-	{
-		ft_putstr_fd("minishell: export: `", STDERR_FILENO);
-		ft_putstr_fd(arg, STDERR_FILENO);
-		ft_putstr_fd("': not a valid identifier\n", STDERR_FILENO);
-		free(*name);
-		free(*value);
-		return (1);
-	}
+{
+    ft_putstr_fd("minishell: export: `", STDERR_FILENO);
+    ft_putstr_fd(arg, STDERR_FILENO);
+    ft_putstr_fd("': not a valid identifier\n", STDERR_FILENO);
+    if (*name)
+        free(*name);
+    if (*value)
+        free(*value);
+    return (1);
+}
 	return (0);
 }
