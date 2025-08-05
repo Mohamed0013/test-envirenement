@@ -59,12 +59,12 @@ t_env	**utils(int count, t_env *temp, t_env *env_list)
 
 void	print_env_sorted(t_env *env_list)
 {
-	if (!env_list)
-		return ;
 	int		count;
 	t_env	*temp;
 	t_env	**arr;
 
+	if (!env_list)
+		return ;
 	count = 0;
 	temp = env_list;
 	while (temp)
@@ -89,10 +89,7 @@ int	ft_export(t_env **env, char **args)
 	i = 1;
 	ret = 0;
 	if (!args || !args[1])
-	{
-		print_env_sorted(*env);
-		return (0);
-	}
+		return (print_env_sorted(*env), 0);
 	while (args[i])
 	{
 		name = NULL;
